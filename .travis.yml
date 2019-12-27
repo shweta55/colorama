@@ -10,7 +10,9 @@ matrix:
       python: 3.8
     - arch: amd64
       python: 3.8
-    - arch: arm64
+    - dist: bionic
+      os: linux
+      arch: arm64
       python: 3.7
     - arch: amd64
       python: 3.7
