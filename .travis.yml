@@ -28,4 +28,5 @@ matrix:
       python: pypy
 install:
   - "pip install mock"
+  - python -m pip freeze
 script: "python -m unittest discover -v -p *_test.py"
