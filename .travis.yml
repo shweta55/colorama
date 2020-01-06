@@ -27,6 +27,6 @@ matrix:
     - arch: amd64
       python: pypy
 install:
-  - "pip install mock asn1crypto cryptography idna keyring keyrings.alt pycrypto pygobject pyxdg SecretStorage"
+  - "pip install mock asn1crypto cryptography idna keyring keyrings.alt pycrypto pyxdg SecretStorage"
   - python -m pip freeze
 script: "python -m unittest discover -v -p *_test.py"
