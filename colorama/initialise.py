@@ -21,13 +21,14 @@ def reset_all():
 
 
 def init(autoreset=False, convert=None, strip=None, wrap=True):
-
+    print("Init")
+    print(autoreset,convert,strip,wrap)
     if not wrap and any([autoreset, convert, strip]):
         raise ValueError('wrap=False conflicts with any other arg=True')
 
     global wrapped_stdout, wrapped_stderr
     global orig_stdout, orig_stderr
-
+    print(sys.stdout)
     orig_stdout = sys.stdout
     orig_stderr = sys.stderr
 
