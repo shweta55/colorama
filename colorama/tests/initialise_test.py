@@ -32,6 +32,8 @@ class InitTest(TestCase):
             'bad stderr wrapper')
 
     def assertNotWrapped(self):
+        print(sys.stdout)
+        print(orig_stderr)
         self.assertIs(sys.stdout, orig_stdout, 'stdout should not be wrapped')
         self.assertIs(sys.stderr, orig_stderr, 'stderr should not be wrapped')
 
@@ -50,6 +52,7 @@ class InitTest(TestCase):
             self.assertNotWrapped()
 
     def testInitDoesntWrapOnNonWindows(self):
+        print("Inside testInitDoesntWrapOnNonWindows")
         with osname("posix"):
             init()
             self.assertNotWrapped()
