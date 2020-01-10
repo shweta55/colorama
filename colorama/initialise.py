@@ -35,8 +35,12 @@ def init(autoreset=False, convert=None, strip=None, wrap=True):
     if sys.stdout is None:
         wrapped_stdout = None
     else:
+        print("In else1")
+        print(sys.stdout)
         sys.stdout = wrapped_stdout = \
             wrap_stream(orig_stdout, convert, strip, autoreset, wrap)
+        print("In else2")
+        print(sys.stdout)
     if sys.stderr is None:
         wrapped_stderr = None
     else:
