@@ -40,7 +40,7 @@ class InitTest(TestCase):
     def testInitDoesntWrapOnNonWindows(self):
         print("Inside testInitDoesntWrapOnNonWindows")
         with osname("posix"):
-            init()
+            init(wrap=False)
             self.assertNotWrapped()
 
     def testInitDoesntWrapIfNone(self):
