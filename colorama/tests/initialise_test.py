@@ -33,7 +33,7 @@ class InitTest(TestCase):
 
     def assertNotWrapped(self):
         print(sys.stdout)
-        print(orig_stderr)
+        print(orig_stdout)
         self.assertIs(sys.stdout, orig_stdout, 'stdout should not be wrapped')
         self.assertIs(sys.stderr, orig_stderr, 'stderr should not be wrapped')
 
